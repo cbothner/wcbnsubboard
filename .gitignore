@@ -1,0 +1,5 @@
+# Ignore my mailer file with my email and password
+mailer.php
+
+# Ignore my daily logfile
+daily.log
