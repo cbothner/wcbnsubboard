@@ -151,7 +151,7 @@ function takesubmit() {
     $resultData = pg_fetch_object($result);
 
     $subject = "Your sub request was taken!";
-        $data->regular_host = explode(" ", $data->regular_host);
+    $resultData->regular_host = explode(" ", $resultData->regular_host);
     $body = "<p>Hello ".$resultData->regular_host[0].",</p>
         
         <p>Good news! Your sub request for <strong>".$resultData->show_name."</strong> on <strong>".$resultData->show_date_t.'</strong> from <strong>'.$resultData->show_start_t.'</strong> to <strong>'.$resultData->show_end_t.'</strong> was fulfilled.</p>
