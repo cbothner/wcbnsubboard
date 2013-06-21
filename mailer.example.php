@@ -1,9 +1,9 @@
 <?php
-function sendanemail($subject, $body, $recipient) {
+function sendanemail($subject, $body, $recipient, $debugging = 0) {
     require_once('class.phpmailer.php');
     $mail = new PHPMailer();
     $mail->IsSMTP(); // enable SMTP
-    $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
+    $mail->SMTPDebug = $debugging; // debugging: 1 = errors and messages, 2 = messages only
     $mail->SMTPAuth = true; // authentication enabled
     $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
     $mail->Host = "smtp.gmail.com";

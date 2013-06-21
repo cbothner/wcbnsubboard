@@ -50,7 +50,7 @@ while($data = pg_fetch_object($result)) {
             
             <p>This notification was sent automatically. Have a lovely day.</p>';
         $recipient = $data->email;
-        sendanemail($subject, $body, $recipient);
+        sendanemail($subject, $body, $recipient, 1);
         echo "<hr />";
     }
 
@@ -65,7 +65,7 @@ while($data = pg_fetch_object($result)) {
             
             <p>This notification was sent automatically. Have a lovely day.</p>';
         $recipient = $data->sub_email;
-        sendanemail($subject, $body, $recipient);
+        sendanemail($subject, $body, $recipient, 1);
         echo "<hr />";
     }
 }
