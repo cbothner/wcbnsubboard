@@ -1,5 +1,5 @@
 <?php
-function sendanemail($subject, $body, $recipient, $debugging = 0) {
+function sendanemail($subject, $body, $recipient = "YOUR MAILING LIST", $debugging = 0) {
     require_once('class.phpmailer.php');
     $mail = new PHPMailer();
     $mail->IsSMTP(); // enable SMTP

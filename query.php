@@ -91,9 +91,8 @@ function requestsubmit() {
         <p>If you want to take this slot, visit <a href="http://remley.wcbn.org/subs/">http://remley.wcbn.org/subs/</a> and take it!</p>
         
         <p>This sub request was sent automatically. Have a lovely day.</p>';
-    $recipient = 'rfaa-announcement@umich.edu';
 
-    sendanemail($subject, $body, $recipient);
+    sendanemail($subject, $body);
 
 }
 
