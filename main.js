@@ -40,13 +40,14 @@ function echeck(str) {
 $(document).on('click','a.sub_name,a.regular_host',function(){
     if($(this).siblings('.personinfo').css("display") == "none"){
         $(this).siblings('.personinfo').css("display","inline-block");
-        $(this).siblings('.comment').css("color","rgb(35,44,48)");
-        $(this).siblings('.comment').css("position","absolute");
+        $(this).siblings('.comment').addClass("invisibletext")
+          .css("position","absolute");
     }
     else{
         $(this).siblings('.personinfo').css("display","none");
-        $(this).siblings('.comment').css("color","rgb(147,146,143)");
-        $(this).siblings('.comment').css("position","inherit");
+        $(this).siblings('.comment').addClass("invisibletext")
+        $(this).siblings('.comment').css("position","inherit")
+          .removeClass("invisibletext");
     }
 });
 
@@ -206,4 +207,17 @@ $(document).on('click','#requestsubmit',function(){
                 }
         });
     }
+});
+
+function createCookie(name,value) {
+    document.cookie = name+"="+value+"; path=/";
+}
+
+$(document).on('click', '.lightcolorscheme', function(){
+  createCookie('wcbnsubboardcolorscheme', 'light');
+  location.reload();
+});
+$(document).on('click', '.darkcolorscheme', function(){
+  createCookie('wcbnsubboardcolorscheme', 'dark');
+  location.reload();
 });

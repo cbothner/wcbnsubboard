@@ -4,7 +4,8 @@
 <title>wcbn sub board: archived requests</title>
 <script src="jquery-1.9.0.js" type="text/javascript"></script>
 <script src="main.js" type="text/javascript"></script>
-<style type="text/css">@import url('main.css');</style>
+<link href="main.css" media="all" rel="stylesheet" type="text/css">
+<link href="<?php echo ($_COOKIE['wcbnsubboardcolorscheme']!='' ? $_COOKIE['wcbnsubboardcolorscheme'] : 'dark'); ?>.css" media="all" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -63,5 +64,6 @@ print_r($slotsObject);
         </ul>
     </div>
 </div>
+<?php include "footer.php" ?>
 </body>
 </html>

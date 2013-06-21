@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(35,44,48);
+  color: rgb(240,240,240);
+}
+.invisibletext {
+  color: rgb(35,44,48) !important;
+}
+a {
+  color: rgb(132,190,249);
+}
+h1 {
+  color: rgb(147,146,143);
+}
+.subtitle {
+  color: rgb(197,196,193);
+}
+.personinfo {
+  color:rgb(218,208,140);
+}
+.regular_host,
+.sub_name,
+.sub_email,.email {color:rgb(218,208,140)}
+.delete,
+.show_name{color:rgb(210,159,136)}
+.show_date,
+.show_start,
+.show_end {color:rgb(132,176,92)}
+.comment {
+  color:rgb(147,146,143);
+}
+.takeconfirm,
+.deletedecline {
+  color:rgb(132,176,92);
+}
+.takedecline,
+.deleteconfirm {
+  color:rgb(210,159,136);
+}
+.requestsuccess{
+  color:rgb(132,176,92);
+}
+footer {
+  border-top: 1px solid #131719;
+  background-color:#1A2124;
+}
+.square {
+  border: 1px solid #131719;
+}

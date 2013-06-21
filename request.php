@@ -6,7 +6,8 @@
 <script src="main.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="jquery.maskedinput.min.js" type="text/javascript"></script>
-<style type="text/css">@import url('main.css');@import url('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');</style>
+<link href="main.css" media="all" rel="stylesheet" type="text/css">
+<link href="<?php echo ($_COOKIE['wcbnsubboardcolorscheme']!='' ? $_COOKIE['wcbnsubboardcolorscheme'] : 'dark'); ?>.css" media="all" rel="stylesheet" type="text/css">
 </head>
 <body onload="$('#regular_host').focus();">
 
@@ -42,5 +43,6 @@
         </form>
     </div>
 </div>
+<?php include "footer.php" ?>
 </body>
 </html>
