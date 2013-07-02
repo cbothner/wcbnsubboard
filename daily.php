@@ -2,7 +2,7 @@
 
 require "mailer.php";
 
-echo "<p>".date(DATE_RFC822).": sending TOMORROW notices.</p>";
+echo "<p><strong>**".date(DATE_RFC822).": sending TOMORROW notices.**</strong></p>";
 
 function queryDB($queryString) {
     $host = "localhost";
