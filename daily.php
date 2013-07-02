@@ -29,8 +29,8 @@ $query = "
         sub_email,
         show_name,
         to_char(show_date,'Day DD Month') as show_date_t,
-        to_char(show_start,'HH12:MMam') as show_start_t,
-        to_char(show_end,'HH12:MMam') as show_end_t,
+        to_char(show_start,'HH12:MIam') as show_start_t,
+        to_char(show_end,'HH12:MIam') as show_end_t,
         taken
     FROM subs
     WHERE show_date >= NOW()::date + interval '1 day'
