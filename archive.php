@@ -19,7 +19,7 @@ $conn;
 $conn = pg_connect("host=$host dbname=$db user=$user password=$pass");
 if(!$conn){die("Database is fail!");}
 
-$query = "SELECT id,sub_name,sub_phone,sub_email,taken,regular_host,show_name,to_char(show_date,'Day DD Month') as show_date_t,to_char(show_start,'HH12:MIam') as show_start_t,to_char(show_end,'HH12:MIam') as show_end_t,comment FROM subs WHERE show_date < NOW()::date AND show_date > NOW()::date - interval '1 month' ORDER BY show_date DESC,show_start DESC;";
+$query = "SELECT id,sub_name,sub_phone,sub_email,taken,regular_host,show_name,to_char(show_date,'Day DD Month') as show_date_t,to_char(show_start,'HH12:MIam') as show_start_t,to_char(show_end,'HH12:MIam') as show_end_t,comment FROM subs WHERE (show_date < NOW()::date OR (show_date = NOW()::date AND show_start < NOW()::time) ) AND show_date > NOW()::date - interval '1 month' ORDER BY show_date DESC,show_start DESC;";
 $slotsResource = pg_query($conn, $query);
 pg_close($conn);
 print_r($slotsObject);
