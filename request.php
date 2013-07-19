@@ -7,6 +7,7 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="jquery.maskedinput.min.js" type="text/javascript"></script>
 <link href="main.css" media="all" rel="stylesheet" type="text/css">
+<link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet" type="text/css">
 <link href="<?php echo ($_COOKIE['wcbnsubboardcolorscheme']!='' ? $_COOKIE['wcbnsubboardcolorscheme'] : 'dark'); ?>.css" media="all" rel="stylesheet" type="text/css">
 </head>
 <body onload="$('#regular_host').focus();">
