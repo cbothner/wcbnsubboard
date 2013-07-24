@@ -25,7 +25,12 @@ h1 {
 .show_date,
 .show_start,
 .show_end {color: rgb(35,44,48);font-weight:bold;}
+.elapsed,
 .comment {
+  color:rgb(107,106,103);
+}
+.elapsed span, .elapsed a {
+
   color:rgb(107,106,103);
 }
 .takeconfirm,

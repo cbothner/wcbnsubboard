@@ -19,7 +19,7 @@ $conn;
 $conn = pg_connect("host=$host dbname=$db user=$user password=$pass");
 if(!$conn){die("Database is fail!");}
 
-$query = "SELECT id,sub_name,sub_phone,sub_email,regular_host,show_name,to_char(show_date,'Day DD Month') as show_date_t,to_char(show_start,'HH12:MIam') as show_start_t,to_char(show_end,'HH12:MIam') as show_end_t,comment FROM subs WHERE (show_date > NOW()::date OR (show_date = NOW()::date AND show_start > NOW()::time) ) AND taken = 'True' ORDER BY show_date ASC,show_start ASC;";
+$query = "SELECT id,sub_name,sub_phone,sub_email,regular_host,show_name,to_char(show_date,'Day DD Month') as show_date_t,to_char(show_start,'HH12:MIam') as show_start_t,to_char(show_end,'HH12:MIam') as show_end_t,comment,(show_date = NOW()::date AND show_start < NOW()::time) as elapsed FROM subs WHERE (show_date >= NOW()::date) AND taken = 'True' ORDER BY show_date ASC,show_start ASC;";
 $slotsResource = pg_query($conn, $query);
 pg_close($conn);
 print_r($slotsObject);
@@ -41,7 +41,7 @@ print_r($slotsObject);
                     $request->comment = 'because '.$request->regular_host.' says "'.$request->comment.'"';
                 }
             ?>
-            <li id="<?php echo $request->id ?>li">
+              <li id="<?php echo $request->id ?>li" <?php if ($request->elapsed == 't') { echo 'class="elapsed"'; } ?>>
                 <a class="sub_name" title="<?php echo $request->sub_phone; ?> &bull; <?php echo $request->sub_email; ?>">
                 <?php echo $request->sub_name; ?></a>
                 is covering for <span class="show_name">
