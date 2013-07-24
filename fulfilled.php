@@ -29,7 +29,8 @@ print_r($slotsObject);
     <div class="grid_12">
         <h1>wcbn sub board:<span class="subtitle">fulfilled requests</span></h1>
         <ul><li>&rarr; <a href="request.php">request a sub</a> for your show, or</li>
-            <li>&rarr; <a href="index.php">see active requests</a></li>
+          <li>&rarr; <a href="index.php">see active requests</a></li>
+          <li>&rarr; <a href="archive.php">archive of past requests</a>, in case you were interested</li>
         </ul>
         <p>these folks are heroes: the following are all the upcoming slots covered by subs</p>
         <ul class="slots">
@@ -59,7 +60,6 @@ print_r($slotsObject);
 
             <?php } ?>
         </ul>
-        <ul><li>&rarr; <a href="archive.php">archive of past requests</a>, in case you were interested</li></ul>
     </div>
 </div>
 <?php include "footer.php" ?>
