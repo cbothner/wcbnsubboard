@@ -45,7 +45,7 @@ print_r($slotsObject);
                     $request->comment = 'saying "'.$request->comment.'"';
                 }
             ?>
-            <li id="<?php echo $request->id ?>li">
+            <li id="<?php echo $request->id ?>li" title="ID: <?php echo $request->id ?>">
                 <<?php echo $aorspan; ?> class="sub_name">
                 <?php echo $request->sub_name; ?><?php echo '</'.$aorspan.'>';?>
                 took the  <span class="show_name">

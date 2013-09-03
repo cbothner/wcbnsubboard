@@ -42,7 +42,7 @@ print_r($slotsObject);
                     $request->comment = 'because '.$request->regular_host.' says "'.$request->comment.'"';
                 }
             ?>
-              <li id="<?php echo $request->id ?>li" <?php if ($request->elapsed == 't') { echo 'class="elapsed"'; } ?>>
+              <li id="<?php echo $request->id ?>li" title="ID: <?php echo $request->id ?>" <?php if ($request->elapsed == 't') { echo 'class="elapsed"'; } ?>>
                 <a class="sub_name" title="<?php echo $request->sub_phone; ?> &bull; <?php echo $request->sub_email; ?>">
                 <?php echo $request->sub_name; ?></a>
                 is covering for <span class="show_name">

@@ -42,7 +42,7 @@ print_r($slotsObject);
       $request->comment = '"'.$request->comment.'"';
       }
       ?>
-      <li id="<?php echo $request->id ?>li">
+      <li id="<?php echo $request->id ?>li" title="ID: <?php echo $request->id ?>">
       <a class="regular_host" title="<?php echo $request->phone; ?> &bull; <?php echo $request->email; ?>"><?php echo $request->regular_host; ?></a> needs you for <span class="show_name">
         <?php echo $request->show_name;?></span> on <span class="show_date">
         <?php echo $request->show_date_t; ?></span> from <span class="show_start">
