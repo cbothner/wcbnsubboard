@@ -1,6 +1,6 @@
 body {
   background-color: rgb(35,44,48);
-  color: rgb(240,240,240);
+  color:rgb(147,146,143);
 }
 .invisibletext {
   color: rgb(35,44,48) !important;
@@ -25,10 +25,8 @@ h1 {
 .show_date,
 .show_start,
 .show_end {color:rgb(132,176,92)}
-.elapsed,
-.comment {
-  color:rgb(147,146,143);
-}
+.comment,
+.elapsed {color: rgb(147,146,143);}
 .elapsed span, .elapsed a {
   color:rgb(147,146,143);
 }
