@@ -68,11 +68,15 @@ and (max-device-width : 480px) {
         top:-0.2em;
     }
 }
+form.deleteform>label{
+    position:relative;
+    top:0.1em;
+}
 form.requestform>input {
     margin-bottom:0.6em;
     width: 20em;
-    position:relative;
     top:-0.2em;
+    position:relative;
 }
 textarea{
     display:inline-block;
