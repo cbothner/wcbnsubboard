@@ -14,6 +14,7 @@ function sendanemail($subject, $body, $recipient = "YOUR MAILING LIST", $debuggi
     $mail->SetFrom('YOUR EMAIL ADDRESS','YOUR NAME');
     $mail->Subject = $subject;
     $mail->Body = $body;
+    $mail->AltBody = strip_tags($body);
     $mail->AddAddress($recipient);
     if(!$mail->Send())
     {
